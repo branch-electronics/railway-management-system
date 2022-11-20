@@ -7,13 +7,14 @@
 <div align="center">
 <?php 
 session_start();
-if(isset($_POST["uid"])){
-    if($_POST["uid"]=='admin' AND $_POST["password"]=='admin' )
-    {
-    $_SESSION["admin_login"]=True;
-    }
+// if(isset($_POST["uid"])){
+if($_POST["uid"]=='admin' AND $_POST["password"]=='admin' )
+{
+$_SESSION["admin_login"]=True;
 }
-if(isset($_SESSION["admin_login"]) && $_SESSION["admin_login"]==True)
+// }
+// isset($_SESSION["admin_login"]) &&
+if( $_SESSION["admin_login"]==True)
 {
 echo " <br><a href=\"http://localhost/railway/insert_into_stations.php\"> Show All Stations </a><br> ";
 echo " <br><a href=\"http://localhost/railway/show_trains.php\"> Show All Trains </a><br> ";
